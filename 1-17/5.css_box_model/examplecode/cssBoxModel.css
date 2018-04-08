@@ -1,0 +1,45 @@
+p#box1 {
+  width: 100px;
+  height: 100px; 
+  background: green
+}
+
+p#box2 {
+  background: purple;
+  border: 5px solid yellow;
+  padding: 20px;
+  margin-bottom: 88px;
+/*   外边距塌陷（margin collapsing）:当两个框彼此接触时，
+  它们的间距将取两个相邻外边界的最大值，而非两者的总和。
+  只要Box2的下外边距<=100px， 与Box3之间的距离则不会产生变化。 */
+}
+/* 四边内边距都为20px;
+或用 padding-top、padding-right、
+padding-bottom 和 padding-left 属性一次设置一个边。 */
+
+p#box3 {
+  background: blue;
+  padding: 30px 20px; 
+  /* padding也可用这种形式，第一个代表上下内边距，后者是左右；margin同理 */
+  margin-top: 100px;
+  /增加上外边距使得Box3与Box2离得更远/
+  /* 外边距可以接受负数，这可以用来引起元素框的重叠。 */
+}
+
+div{
+  height: 200px;
+  width: 200px;
+  background: orange;
+  /* 400 px中间不能有空格！ */
+}
+
+p#box4 {
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  background: #ee3e80; 
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+/* 放在正中央！ */

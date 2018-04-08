@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 为了解决移动端屏幕分辨率的问题，各大浏览器专门定义并支持viewport虚拟窗口，他的作用就是允许开发者创建一个虚拟窗口，并且可以自定义其窗口大小或缩放比例，你只需要在网页的头部加入如下meta -->
+<style>
+* {
+    box-sizing: border-box;
+}
+/*元素的内边距和边框不再会增加它的宽度*/
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+/*clear: both 元素被向下移动用于清除之前的左右浮动*/
+/*display:block 该元素生成一个块元素盒*/
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.header {
+    background-color: black;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: orange;
+    color: #ffffff;
+}
+
+.aside {
+    background-color: orange;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    height: 400px;
+}
+
+.footer {
+    background-color: grey;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+}
+
+.col-3 {width: 25%;}
+.col-6 {width: 50%;}
+
+/*媒体查询：当屏幕最大宽度为600像素时改变样式*/
+@media only screen and (max-width: 600px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    .aside {
+        height: auto;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Header</h1>
+</div>
+
+<div class="row">
+<div class="col-3 menu">
+  <ul>
+    <li>Text 1</li>
+    <li>Text 2</li>
+    <li>Text 3</li>
+    <li>Text 4</li>
+  </ul>
+</div>
+
+<div class="col-6">
+  <h1>Title</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+<div class="col-3">
+  <div class="aside">
+    <h2>Aside</h2>
+  </div>
+</div>
+</div>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+</body>
+</html>
+
+
