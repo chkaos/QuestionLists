@@ -19,7 +19,7 @@ new constructor[([arguments])]
 
 Example:
 
-假设你要创建一个汽车的对象类型。你希望这个类型叫做Person 它有name, age, sex等属性，要做到这些，你需要写这样一个函数：
+假设你要创建一个人的对象类型。你希望这个类型叫做Person 它有name, age, sex等属性，要做到这些，你需要写这样一个函数：
 ~~~js
 function Person(name, age, sex){
    this.name = name;
