@@ -12,7 +12,7 @@ function convert(num) {
     console.log(output); 
 }
 
-nums.forEach(convert);s
+nums.forEach(convert);
 ~~~
 
 Output:
@@ -23,4 +23,4 @@ Output:
 9
 ~~~
 
-首先，我们创建一个只包含数字的数组对象。用数组的方法`forEach`（也是函数）来遍历整个数组，将另一个函数作为参数对每个元素进行转换。
+首先，我们创建一个只包含数字的数组对象。用数组的方法`forEach()`来遍历整个数组，将另一个函数作为参数对每个元素进行转换。
