@@ -261,14 +261,63 @@ nums.every(isBigEnough(0));
 另外，空数组也是返回true。(空数组中所有元素都符合给定的条件，注：因为空数组没有元素)。
 
 `some()`如果数组中至少有一个元素满足测试函数，则返回 true，否则返回 false。
+~~~
+function isBigEnough(element, index, array) {
+  return (element >= 10);
+}
+var passed = [2, 5, 8, 1, 4].some(isBigEnough);
+// passed is false
+passed = [12, 5, 8, 1, 4].some(isBigEnough);
+// passed is true
+~~~
 
 `filter()`将所有在过滤函数中返回 true 的数组元素放进一个新数组中并返回。
+~~~
+function isBigEnough(value) {
+  return value >= 10;
+}
+
+var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
+console.log(filtered);
+
+-> Array [ 12, 130, 44 ]
+~~~
 
 `map()`返回一个由回调函数的返回值组成的新数组。
+~~~js
+var nums = [1, 2, 3, 4];
+nums.map(element => element*2 + 1);
+
+->Array [ 3, 5, 7, 9 ]
+~~~
 
 `reduce()`从左到右为每个数组元素执行一次回调函数，并把上次回调函数的返回值放在一个暂存器中传给下次回调函数，并返回最后一次回调函数的返回值。
 
+~~~js
+var nums = [3,67,63,7,9,84,7,5];
+function compare(a, b){
+	if(a>b){
+		return a;
+	} else {
+		return b;
+	}
+}
+nums.reduce(compare);
+
+//找到最大值84
+~~~
+
 `reduceRight`右到左为每个数组元素执行一次回调函数，并把上次回调函数的返回值放在一个暂存器中传给下次回调函数，并返回最后一次回调函数的返回值。
+
+~~~js
+var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
+    return a.concat(b);
+}, []);
+console.log(flattened);
+
+// Array [ 4, 5, 2, 3, 0, 1 ]
+~~~
+
 
 
 
