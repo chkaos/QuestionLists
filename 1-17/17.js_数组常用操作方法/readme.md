@@ -90,7 +90,7 @@ console.log(zoo);
 ~~~
 
 `sort()` 方法用就地（ in-place ）的算法对数组的元素进行排序，并返回数组。 sort 排序不一定是稳定的。默认排序顺序是根据字符串Unicode码点。
-~~~
+~~~js
 var fruit = ['cherries', 'apples', 'bananas'];
 fruit.sort(); 
 // ['apples', 'bananas', 'cherries']
@@ -113,7 +113,7 @@ things.sort();
 		array.splice(start, deleteCount, item1, item2, ...)
 
 
-`start​`
+`start`
 
     指定修改的开始位置（从0计数）。如果超出了数组的长度，则从数组末尾开始添加内容；如果是负值，则表示从数组末位开始的第几位（从-1计数）；若只使用start参数而不使用deleteCount、item，如：array.splice(start) ，表示删除[start，end]的元素。
 
@@ -223,7 +223,7 @@ arr.indexOf(4);				   //-1
 
 		arr.lastIndexOf(searchElement[, fromIndex = arr.length - 1])
 
-~~~
+~~~js
 var arr = [1, 2, 3, 1];
 arr.lastIndexOf(1);                //3
 arr.lastIndexOf(1,1);              //0
@@ -261,7 +261,7 @@ nums.every(isBigEnough(0));
 另外，空数组也是返回true。(空数组中所有元素都符合给定的条件，注：因为空数组没有元素)。
 
 `some()`如果数组中至少有一个元素满足测试函数，则返回 true，否则返回 false。
-~~~
+~~~js
 function isBigEnough(element, index, array) {
   return (element >= 10);
 }
@@ -272,7 +272,7 @@ passed = [12, 5, 8, 1, 4].some(isBigEnough);
 ~~~
 
 `filter()`将所有在过滤函数中返回 true 的数组元素放进一个新数组中并返回。
-~~~
+~~~js
 function isBigEnough(value) {
   return value >= 10;
 }
