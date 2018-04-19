@@ -49,7 +49,7 @@ p#box2 {
     margin-top: 10px;
 }
 ~~~
-![code1](/1-17/5. css的box model及jsbin例子/raw/images/code1.png)
+![](./raw/images/code1.png)
 
 >可以看出两个元素之间的距离为他们本身的height 50px,因为BOX1的下外边距50px为在二者中较大。
 
@@ -70,7 +70,7 @@ p#box2 {
     margin-top: -60px;
     }
 ~~~
-![code2](/1-17/5. css的box model及jsbin例子/raw/images/code2.png)
+![](./raw/images/code2.png)
 
 > 把BOX2的   margin-top改为-60px并给Box1加点透明度，此时可以看到两个元素部分重叠。
 
